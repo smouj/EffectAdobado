@@ -1,0 +1,12 @@
+EffectAdobado portable mode
+
+While this file sits next to effectcraft.exe, EffectAdobado keeps its settings, keyboard shortcuts,
+crash-recovery files, logs and plug-ins in the EffectAdobadoData folder beside it instead of
+%APPDATA%\EffectAdobado. Copy the whole folder to move EffectAdobado with its settings.
+
+The disk cache, media cache and conformed audio still go to %LOCALAPPDATA%\EffectAdobado unless
+you choose other folders in Edit > Preferences > Disk.
+
+Delete this file to use the normal per-user settings folder (%APPDATA%\EffectAdobado) instead.
+If EffectAdobadoData can't be written (for example on a read-only drive), EffectAdobado logs a
+warning and uses %APPDATA%\EffectAdobado instead.
