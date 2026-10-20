@@ -1,4 +1,4 @@
-//! Help menu: community and project links (the frontend opens `Event::OpenUrl`).
+//! Help menu: support and project links (the frontend opens `Event::OpenUrl`).
 
 use serde_json::{Value, json};
 
@@ -12,7 +12,7 @@ fn open(s: &mut Session, url: String) -> Result<Value> {
 }
 
 fn sibling(s: &mut Session, p: &Value) -> Result<Value> {
-    let slug = str_p(p, "app").unwrap_or("photocraft").to_ascii_lowercase();
+    let slug = str_p(p, "app").unwrap_or("PhotoAdobado").to_ascii_lowercase();
     if str_p(p, "kind") == Some("github") { open(s, links::github_of(&slug)) } else { open(s, links::page_of(&slug)) }
 }
 
@@ -31,9 +31,9 @@ fn docs(s: &mut Session, p: &Value) -> Result<Value> {
 pub fn specs() -> Vec<CommandSpec> {
     vec![
         cmd!("help.docs", "EffectAdobado Help...", [], Some("F1"), "{page?: help|scripting|expressions|effects|agents}", always, docs),
-        cmd!("help.discord", "Join the Adobado Kit Discord...", ["Help"], None, "{}", always, |s, _| open(s, links::DISCORD.into())),
+        cmd!("help.discord", "Get help and report an issue...", ["Help"], None, "{}", always, |s, _| open(s, links::SUPPORT.into())),
         cmd!("help.website", "Adobado Kit Website", ["Help"], None, "{}", always, |s, _| open(s, links::WEBSITE.into())),
-        cmd!("help.appPage", "EffectAdobado Home Page", ["Help"], None, "{}", always, |s, _| open(s, links::APP_PAGE.into())),
+        cmd!("help.appPage", "EffectAdobado Project Page", ["Help"], None, "{}", always, |s, _| open(s, links::APP_PAGE.into())),
         cmd!("help.github", "EffectAdobado on GitHub", ["Help"], None, "{}", always, |s, _| open(s, links::GITHUB.into())),
         cmd!("help.onlineTutorials", "Online Tutorials...", ["Help"], None, "{}", always, |s, _| open(s, links::APP_PAGE.into())),
         cmd!("help.inAppTutorials", "In-App Tutorials...", ["Help"], None, "{} → the Home screen's Learn tab", always, |s, p| super::frontend(
@@ -47,7 +47,7 @@ pub fn specs() -> Vec<CommandSpec> {
             "Other Adobado Kit Apps",
             [],
             None,
-            "{app: photocraft|vectorcraft|filmcraft|lightcraft|pdfcraft|designcraft, kind?: page|github}",
+            "{app: PhotoAdobado|ArtAdobado|FilmAdobado|LightAdobado|SoundAdobado|DesignAdobado|PdfAdobado, kind?: page|github}",
             always,
             sibling
         ),
