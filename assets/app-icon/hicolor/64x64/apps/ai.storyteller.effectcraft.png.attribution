@@ -1,8 +1,8 @@
 asset:        ai.storyteller.effectcraft.png
-title:        EffectCraft app icon, Linux hicolor 64x64
-author:       EffectCraft contributors (drawing by the project owner in ArtCraft)
-source:       original work
+title:        EffectCraft app icon, ai.storyteller.effectcraft.png
+author:       @smouj (project owner)
+source:       Original work supplied in the owner-provided Adobado_Icon_Pack_Final.zip; SHA256SUMS.txt verified before synchronization
 license:      MIT OR Apache-2.0
 license-file: assets/app-icon/LICENSE.txt
-added:        2026-10-02 by EffectCraft contributors (Claude agent, app icon)
-notes:        Rendered from effectcraft.svg with resvg by packaging/icons.sh.
+added:        2026-10-20 with owner authorization
+notes:        Canonical icon or platform-size rendering of the official icon pack PNG

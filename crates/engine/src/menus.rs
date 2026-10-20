@@ -1244,11 +1244,11 @@ Help
   Enable Logging | help.enableLogging
   Reveal Logging File | help.revealLogFile
   ---
-  Join the Adobado Kit Discord... | help.discord
+  Get help and report an issue... | help.discord
   Provide Feedback... | help.reportIssue
   ---
   Adobado Kit Website | help.website
-  EffectAdobado Home Page | help.appPage
+  EffectAdobado Project Page | help.appPage
   EffectAdobado on GitHub | help.github
   Open Demo Project | file.openDemoProject
   [!mac] ---
